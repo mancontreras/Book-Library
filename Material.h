@@ -2,18 +2,26 @@
 #define MATERIAL_H
 
 #include <string>
-#include <iostream>
 
 class Material {
-    protected:
+private:
     string title;
     string author;
     int yearPublished;
     string availability;
 
-    public:
-    Material()
-    string showAvailability();
+public:
+    Material(); 
+    Material(string title, string author, int yearPublished, string availability); 
 
+    
+    string getTitle();
+    string getAuthor();
+    int getYearPublished();
+    string getAvailability();
+
+    
+    void setAvailability(string availability);
 };
+
 #endif

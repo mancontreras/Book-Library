@@ -1,5 +1,30 @@
 #include "Book.h"
 
-Book::Book(){}
+#include <string>
+#include <iostream>
 
-string Book::showAvailability() {}
+Book::Book() : Material() {
+    numberOfPages = 0;
+    ISBN = "";
+    editorial = "";
+}
+
+Book::Book(string title, string author, int yearPublished, string availability,
+           int numberOfPages, string ISBN, string editorial)
+    : Material(title, author, yearPublished, availability) {
+    this->numberOfPages = numberOfPages;
+    this->ISBN = ISBN;
+    this->editorial = editorial;
+}
+
+int Book::getNumberOfPages() {
+    return numberOfPages;
+}
+
+string Book::getISBN() {
+    return ISBN;
+}
+
+string Book::getEditorial() {
+    return editorial;
+}

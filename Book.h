@@ -5,16 +5,21 @@
 #include <string>
 #include <iostream>
 
-class Book{
-    private:
-    int numberofpages;
-    string isbn;
+
+class Book : public Material {
+private:
+    int numberOfPages;
+    string ISBN;
     string editorial;
 
-    public:
-    Book()
-    string showAvailability();
+public:
+    Book();
+    Book(string title, string author, int yearPublished, string availability,
+         int numberOfPages, string ISBN, string editorial);
 
+    int getNumberOfPages();
+    string getISBN();
+    string getEditorial();
 };
 
 #endif
