@@ -1,27 +1,26 @@
 #include "Article.h"
 #include <string>
-#include <iostream>
 
-Article::Article() {
-    title = "";
-    author = "";
-    content = "";
+/*Includes the header file */
+
+Article::Article() {}
+
+Article::Article(std::string _atitle, std::string _writer, std::string _content) {
+    atitle = _atitle;
+    writer = _writer;
+    content = _content;
+}
+/*Default constructor and one with parameters */
+
+std::string Article::getTitle() {
+    return atitle;
 }
 
-Article::Article(string title, string author, string content) {
-    this->title = title;
-    this->author = author;
-    this->content = content;
+std::string Article::getAuthor() {
+    return writer;
 }
 
-string Article::getTitle() {
-    return title;
-}
-
-string Article::getAuthor() {
-    return author;
-}
-
-string Article::getContent() {
+std::string Article::getContent() {
     return content;
 }
+/* Getters for the attributes*/

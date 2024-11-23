@@ -3,23 +3,26 @@
 
 #include "Material.h"
 #include <string>
-#include <iostream>
+/* Include header file of the superclass */
 
+
+/* Define my attributes and methods*/
+/*Specify that is a subclass*/
 
 class Book : public Material {
 private:
     int numberOfPages;
-    string ISBN;
-    string editorial;
+    std::string isbn;
+    std::string editorial;
 
 public:
     Book();
-    Book(string title, string author, int yearPublished, string availability,
-         int numberOfPages, string ISBN, string editorial);
+    Book(std::string _title, std::string _author, int _yearPublished, bool _availability,
+         int _numberOfPages, std::string _isbn, std::string _editorial);
 
     int getNumberOfPages();
-    string getISBN();
-    string getEditorial();
+    std::string getISBN();
+    std::string getEditorial();
 };
 
 #endif

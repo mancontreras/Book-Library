@@ -1,27 +1,31 @@
 #ifndef MATERIAL_H
 #define MATERIAL_H
-
+/*Define header file*/
 #include <string>
 
+
+/* Define my attributes and methods*/
 class Material {
-private:
-    string title;
-    string author;
+    /*Attributes protected as it is the superclass*/
+protected:
+    std::string title;
+    std::string author;
     int yearPublished;
-    string availability;
+    bool availability;
 
 public:
     Material(); 
-    Material(string title, string author, int yearPublished, string availability); 
+    Material(std::string _title, std::string _author, int _yearPublished, bool _availability);
 
-    
-    string getTitle();
-    string getAuthor();
+
+
+    std::string getTitle();
+    std::string getAuthor();
     int getYearPublished();
-    string getAvailability();
+    bool getAvailability();
 
     
-    void setAvailability(string availability);
+    void setAvailability(bool _availability);
 };
 
 #endif

@@ -1,28 +1,23 @@
 #include "Material.h"
-#include <iostream>
 #include <string>
 
+/*Include header file */
+
+/*Define contructors, attributes and methods*/
+Material::Material() {}
 
 
-Material::Material() {
-    title = "";
-    author = "";
-    yearPublished = 0;
-    availability = "Unavailable";
-}
+Material::Material(std::string _title, std::string _author, int _yearPublished, bool _availability) {
+    title = _title;
+    author = _author;
+    yearPublished = _yearPublished;
+    availability = _availability;}
 
-Material::Material(string title, string author, int yearPublished, string availability) {
-    this->title = title;
-    this->author = author;
-    this->yearPublished = yearPublished;
-    this->availability = availability;
-}
-
-string Material::getTitle() {
+std::string Material::getTitle() {
     return title;
 }
 
-string Material::getAuthor() {
+std::string Material::getAuthor() {
     return author;
 }
 
@@ -30,11 +25,13 @@ int Material::getYearPublished() {
     return yearPublished;
 }
 
-string Material::getAvailability() {
-    return availability;
-}
 
-void Material::setAvailability(string availability) {
-    this->availability = availability;
+
+bool Material::getAvailability() {
+    return availability;}
+
+
+void Material::setAvailability(bool _availability){
+    availability = _availability;               
 }
 
